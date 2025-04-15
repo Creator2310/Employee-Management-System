@@ -6,9 +6,13 @@
 <head>
     <title>Register New Manager</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e8f5e9, #f1f8e9);
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,42 +20,78 @@
             align-items: center;
             height: 100vh;
         }
+
         .form-container {
             background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 400px;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 420px;
+            transition: all 0.3s ease-in-out;
         }
+
         h1 {
             text-align: center;
-            color: #333333;
+            color: #2e7d32;
+            margin-bottom: 25px;
         }
+
         label {
             display: block;
-            margin-bottom: 10px;
-            color: #555555;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
         }
+
         input {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s ease;
         }
+
+        input:focus {
+            outline: none;
+            border-color: #4caf50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+        }
+
         button {
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
+            padding: 12px;
+            background-color: #4caf50;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
+
         button:hover {
-            background-color: #45a049;
+            background-color: #43a047;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            input, button {
+                font-size: 14px;
+            }
         }
     </style>
+
 </head>
 <body>
 <div class="form-container">

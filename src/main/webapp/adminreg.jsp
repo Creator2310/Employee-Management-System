@@ -4,9 +4,13 @@
 <head>
     <title>Admin Registration Page</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #fff);
             margin: 0;
             padding: 0;
             display: flex;
@@ -14,42 +18,78 @@
             align-items: center;
             height: 100vh;
         }
+
         .registration-container {
             background-color: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 400px;
+            transition: all 0.3s ease-in-out;
         }
+
         h2 {
             text-align: center;
-            color: #333333;
+            color: #2c3e50;
+            margin-bottom: 25px;
         }
+
         label {
             display: block;
             margin-bottom: 8px;
-            color: #555555;
+            font-weight: 500;
+            color: #34495e;
         }
+
         input {
-            width: 90%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #cccccc;
-            border-radius: 4px;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s;
         }
+
+        input:focus {
+            outline: none;
+            border-color: #4caf50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
         button {
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
+            padding: 12px;
+            background-color: #4caf50;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
+
         button:hover {
-            background-color: #45a049;
+            background-color: #43a047;
+        }
+
+        @media (max-width: 480px) {
+            .registration-container {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input, button {
+                font-size: 14px;
+            }
         }
     </style>
+
 </head>
 <body>
 <div class="registration-container">
